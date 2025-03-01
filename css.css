@@ -1,0 +1,467 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+
+/* TOOLBAR */
+#toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #242424;
+  color: #fff; 
+  position: fixed;
+  top: 0;
+  z-index: 50;
+}
+#toolbar img {
+  width: 30px; /* Tamaño del icono */
+  height: 30px;
+  filter: invert(100%);
+  user-select: none;
+  cursor: none;
+}
+#toolbar div {
+  display: flex;
+  align-items: center;
+  right: 0;
+  margin: 0 0 0 auto;
+}
+#toolbar p {
+  margin: 0;
+  font-size: 16px;
+}
+#toolbar span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+#back-toolbar {
+  width: 100%;
+  height: 70px;
+}
+
+
+
+/* MENU */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 51;
+}
+#menu.open {
+  transform: translateX(0);
+}
+#menuOpen {
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+#menu.a {
+  margin: 0 10px 0 10px;
+}
+
+
+
+
+
+/* CUERPO */
+.div_a, .div_b, .div_c {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin: 0;
+}
+.div_c {
+  background-image: url('dark.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.div_b {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.p {
+  font-size: 45px;
+  margin: 0 auto 0 auto;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.p2, .p6 {
+  font-size: 17px;
+  margin: 0 auto 0 auto;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: #3a3a3a;
+  border: solid 1px #3a3a3a;
+  padding: 5px 15px 5px 15px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  width: fit-content;
+  margin-top: 35px;
+  margin-bottom: 60px;
+  height: auto;
+}
+.p6 {
+  margin: auto;
+  border: solid 1px white;
+  color: white;
+  border-right: 15;
+  display: flex;
+  background-color: #3a3a3a;
+  font-size: 14px;
+  padding: 10px 15px 10px 15px;
+}
+
+
+.div_b2 {
+  width: 50%;
+  height: auto;
+  padding: 20px 10px 15px 10px;
+  box-sizing: border-box;
+  margin: 0;
+}
+.p3, .p5, .p4 {
+  font-size: 16px;
+  margin: 0 auto 0 auto;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.p5 {
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+.p4 {
+  font-weight: 400;
+  color: #eeeeee;
+  margin-top: 20px;
+}
+.iconos {
+  width: 150px;
+  height: auto;
+  margin: 15px auto 20px auto;
+  display: flex;
+}
+
+
+
+
+
+
+
+
+/* MENU PRODUCTOS */
+#contain2 {
+  display: block;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#x1, #x2 {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  margin-bottom: 20px;
+  user-select: none;
+}
+#div-navegacion {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  background-color: #242424;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.btn2 {
+  background-color: #242424;
+  border-radius: 3px;
+  padding: 5px 10px 5px 10px;
+  margin: 0 0 5px 0;
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  border: solid 1px #242424;
+}
+.btn2:active {
+  border: solid 1px #b5b5b5;
+}
+#div-fetch {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+#div-productos1 {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+
+/* SERVIDORES */
+.div-productos {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+padding: 20px;
+box-sizing: border-box;
+ border-radius: 15px;
+  background-color: #242424;
+  overflow: hidden;
+  z-index: 2;
+  margin-top: 25px;
+}
+.nuevo {
+  position: absolute;
+  top: 20px;
+  left: -35px;
+  transform: rotate(-50deg);
+  background-color: #ffd137;
+  color: #fff;
+  padding: 5px 40px 5px 40px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.btn-add-car {
+  padding: 10px 15px 10px 15px;
+  background-color: #ffd137;
+  border-radius: 10px;
+  margin: 25px 0;
+}
+
+@media screen and (min-width: 760px) {
+  #div-productos1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .div-productos {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+h2, h3, p {
+  color: white;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.pp {
+  color: #a7a7a7;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* NUMERO PEDIDOS */
+#footer-pedidos {
+ width: 100%;
+ height: auto;
+ max-height: 100%;
+ position: fixed;
+ bottom: 0;
+ background-color: #ffd137;
+ margin: 0;
+ padding: 20px;
+ box-sizing: border-box;
+ left: 0;
+ z-index: 5;
+ border-radius: 2px 2px 0 0;
+ overflow-y: auto;
+}
+
+
+/* TERMINOS Y CONDICIONES */
+#contain3, #contain4, #contain5, #contain6, #contain7 {
+  width: 90%;
+  margin: 0 auto 0 auto;
+  background-color: #2a2a2a;
+  
+}
+#contain3, #contain4, #contain5 {
+  display: none;
+}
+
+
+hr {
+  width: 90%;
+  height: 1px;
+  border: none;
+  background-color: #fad01f;
+  border-radius: 2px;
+  margin: 35px auto 35px auto;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+/* DIV PADRE */
+.contenedor-contacto {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  flex-wrap: wrap;
+}
+/* TARJETAS DE CONTACTO */
+.tarjeta-contacto {
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto 25px auto;
+  flex-basis: 70%;
+  box-sizing: border-box;
+}
+/* MEDIA QUERIES PARA AJUSTAR EL ANCHO DE LAS TARJETAS EN DIFERENTES DISPOSITIVOS */
+@media (min-width: 768px) {
+  .tarjeta-contacto {
+    flex-basis: 25%;
+  }
+}
+/* CENTRAR EL CONTENIDO DE LAS TARJETAS */
+.tarjeta-contacto img {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 0 auto;
+  display: flex;
+}
+.tarjeta-contacto h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.tarjeta-contacto p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.boton-contacto {
+  background-color: #ffd421;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+}
+.boton-contacto:active {
+  background-color: #d6af0a;
+}
+
+
+
+
+
+/* CONTAI7 PAGAR */
+#contain7 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2a2a2a;
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.contenido-centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+#imgp {
+  width: 100px;
+  height: 100px;
+  margin: 20px 0;
+}
+.ticket-scroll {
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  background: #f8f8f8;
+}
+.advertencia {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0;
+}
+#btnContinuar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 0;
+}
+#btnContinuar:hover {
+  background-color: #45a049;
+}
+
+
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #242424;
+  margin-top: 40px;
+}
